@@ -487,9 +487,20 @@ Chat.ChildAdded:Connect(function(instance)
                                 Dontsend = false
                             end
 
+                        elseif string.find(instance.TextLabel.Text,"Frost Defender") then
+                            if string.find(instance.TextLabel.Text,"Shiny") then
+                                HatchText =  username .. " just hatched a **Shiny Secret** **Frost Defender**! (**1e-07%**)"
+                                PetImage = ""
+                                Dontsend = false
+                            else
+                                HatchText =  username .. " just hatched a **Secret** **Frost Defender**! (**1e-05%**)"
+                                PetImage = ""
+                                Dontsend = false
+                            end
+
                         elseif string.find(instance.TextLabel.Text,"King Penguin") then
                             if string.find(instance.TextLabel.Text,"Shiny") then
-                                HatchText =  username .. " just hatched a **Shiny King Penguin**! (**0.2%**)"
+                                Hatchtext =  username .. " just hatched a **Shiny King Penguin**! (**0.2%**)"
                                 PetImage = ""
                                 if _G.SkipT1Hatches == true then
                                     Dontsend = true
@@ -506,27 +517,9 @@ Chat.ChildAdded:Connect(function(instance)
                                 end
                             end
 
-                        elseif string.find(instance.TextLabel.Text,"Dragon") then
-                            if string.find(instance.TextLabel.Text,"Shiny") then
-                                HatchText =  username .. " just hatched a **Shiny Dagon**! (**0.3%**)"
-                                PetImage = ""
-                                if _G.SkipT1Hatches == true then
-                                    Dontsend = true
-                                else
-                                    Dontsend = false
-                            else
-                                HatchText =  username .. " just hatched a **Dragon**! (**3%**")
-                                PetImage = ""
-                                if _G.SkipT1Hatches == true then
-                                    Dontsend = true
-                                else
-                                    Dontsend = false
-                                end
-                            end
-                        
                         elseif string.find(instance.TextLabel.Text,"Slime Cube") then
-                            if string.find(instance.TextLabel.Text,"Shiny") then
-                                HatchText =  username .. " just hatched a **Shiny Slime Cube**! (**0.1%**)"
+                            if string.find(instancen.TextLabel.Text,"Shiny") then
+                                HatchText =  username .. " just hatched a **Shiny Slime Cube**! (0.1%**)"
                                 PetImage = ""
                                 if _G.SkipT1Hatches == true then
                                     Dontsend = true
@@ -534,24 +527,32 @@ Chat.ChildAdded:Connect(function(instance)
                                     Dontsend = false
                                 end
                             else
-                                HatchText =  username .. " just hatched a **Slime Cube**! (**1%*)"
-                                PetImage =  ""
-                                if _G.SkipT1Hatches == true
+                                HatchText =  username .. " just hatched a **Slime Cube**! (**1%**)"
+                                PetImage = ""
+                                if _G.SkipT1Hatches == true then
                                     Dontsend = true
                                 else
                                     Dontsend = false
                                 end
                             end
 
-                        elseif string.find(instance.TextLabel.Text,"Frost Defender") then
-                            if string.find(instance.TextLabel.Text,"Shiny") then
-                                HatchText =  username .. " just hatched a **Shiny Secret** **Frost Defender**! (**1e-07%**)"
+                        elseif string.find(instance.TextLabel.Text,"Dragon") then
+                            if string.find(instancen.TextLabel.Text,"Shiny") then
+                                HatchText =  username .. " just hatched a **Shiny Dragon**! (**0.3%**)"
                                 PetImage = ""
-                                Dontsend = false
+                                if _G.SkipT1Hatches == true then
+                                    Dontsend = true
+                                else
+                                    Dontsend = false
+                                end
                             else
-                                HatchText =  username .. " just hatched a **Secret** **Frost Defender**! (**1e-05%**)"
+                                HatchText =  username .. " just hatched a **Dragon**! (**3%**)"
                                 PetImage = ""
-                                Dontsend = false
+                                if _G.SkipT1Hatches == true then
+                                    Dontsend = true
+                                else
+                                    false
+                                end
                             end
                         -- End of this function
                         end
