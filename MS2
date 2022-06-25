@@ -491,11 +491,19 @@ Chat.ChildAdded:Connect(function(instance)
                             if string.find(instance.TextLabel.Text,"Shiny") then
                                 HatchText =  username .. " just hatched a **Shiny King Penguin**! (**0.2%**)"
                                 PetImage = ""
-                                Dontsend = false
+                                if _G.SkipT1Hatches == true then
+                                    Dontsend = true
+                                else
+                                    Dontsend = false
+                                end
                             else
                                 HatchText =  username .. " just hatched a **King Penguin**! (**2%**)"
                                 PetImage = ""
-                                Dontsend = false
+                                if _G.SkipT1Hatches == true then
+                                    Dontsend = true
+                                else
+                                    Dontsend = false
+                                end
                             end
 
                         elseif string.find(instance.TextLabel.Text,"Dragon") then
@@ -524,6 +532,7 @@ Chat.ChildAdded:Connect(function(instance)
                                     Dontsend = true
                                 else
                                     Dontsend = false
+                                end
                             else
                                 HatchText =  username .. " just hatched a **Slime Cube**! (**1%*)"
                                 PetImage =  ""
@@ -587,4 +596,4 @@ Chat.ChildAdded:Connect(function(instance)
         end
     end
 end)
-print('MS2 Pet Hatcher V1.0.3, Maintained and Updated by Leichtespiele#6050')
+print('MS2 Pet Hatcher V1.0.3, Maintained and Updated by PetSimulatorXPlayer#5011')
