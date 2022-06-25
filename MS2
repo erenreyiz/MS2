@@ -587,4 +587,4 @@ Chat.ChildAdded:Connect(function(instance)
         end
     end
 end)
-print('MS2 Pet Hatcher V1.0.3, Maintained and Updated by PetSimulatorXPlayer#5011')
+print('MS2 Pet Hatcher V1.0.3, Maintained and Updated by Leichtespiele#6050')
