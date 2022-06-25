@@ -588,12 +588,12 @@ Chat.ChildAdded:Connect(function(instance)
                             local Info = game:GetService("HttpService"):JSONEncode(Info)
                             local HttpRequest = http_request;
                             if syn then HttpRequest = syn.request else HttpRequest = http_request end
-                                HttpRequest({Url=Webhook, Body=Info, Method="POST", Headers=Headers})
+                                HttpRequest(({Url=Webhook, Body=Info, Method="POST", Headers=Headers})
                         end
                     end
                 end
             end
         end
     end
-end()
-print('MS2 Pet Hatcher V1.0.3, Maintained and Updated by PetSimulatorXPlayer#5011')
+end)
+print('MS2 Pet Hatcher V1.0.3, Maintained and Updated by Leichtespiele#6050')
